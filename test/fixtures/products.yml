@@ -1,6 +1,6 @@
 skello:
-  name: "Skello"
-  tagline: "Manage your staff calendar"
+  title: "Skello"
+  description: "Manage your staff calendar"
 roadstr:
-  name: "Roadstr"
-  tagline: "Rent a vintage car"
+  title: "Roadstr"
+  description: "Rent a vintage car"

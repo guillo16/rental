@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @product = Product.find(params[:id])
   end
 
   def new
@@ -17,7 +18,7 @@ class ProductsController < ApplicationController
     @product.user = current_user
     if @product.save
 
-      redirect_to root_path
+      redirect_to product_path(@product)
     else
       render :new
     end

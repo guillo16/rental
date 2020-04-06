@@ -18,15 +18,12 @@ class ProductsTest < ApplicationSystemTestCase
     fill_in "product_title", with: "Le Wagon"
 
     fill_in "product_description", with: "Change your life: Learn to code"
-    fill_in 'product_category_id', with: 'mochila'
-
-    # save_and_open_screenshotselect "option_name_here", :from => "organizationSelect"
-    select 'Option', from: 'Select box'
+    select 'mochila' , from: 'product_category_id'
 
     click_on 'Create Product'
+
+
     save_and_open_screenshot
-
-
     # Should be redirected to Home with new product
     assert_equal root_path, page.current_path
     assert_text "Change your life: Learn to code"

@@ -1,12 +1,13 @@
+Awesome Products
+<% @products.each do |product| %>
 <div class="product">
-  <h1>Awesome Products</h1>
-  <% @products.each do |product| %>
   <h3><%= product.title %></h3>
 
   <p><%= product.description %></p>
-  <% end %>
-
-
 </div>
+<% end %>
+
+
+
 
 

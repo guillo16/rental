@@ -5,4 +5,10 @@ class Product < ApplicationRecord
 
   validates :title, presence: true
   validates :description, presence: true
+
+  def unavailable_dates
+    bookings.pluck(:start_time, :end_time).map do |range|
+      { from: range[0], to: range[1] }
+    end
+  end
 end

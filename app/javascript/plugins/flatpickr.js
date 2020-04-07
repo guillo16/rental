@@ -19,12 +19,3 @@ flatpickr(".datepicker", {
 
     });
 
-
-timepickr(".timepicker", {
- enableTime: true,
- noCalendar: true,
- dateFormat: "H",
- time_24hr: true,
- minTime: "09:00",
- maxTime: "20:00",
-});

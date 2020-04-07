@@ -3,10 +3,10 @@ class Booking < ApplicationRecord
   belongs_to :product
 
   validates :date, presence: true
-  validates :start, presence: true
-  validates :end, presence: true
+  validates :start_time, presence: true
+  validates :end_time, presence: true
   validate :date_before_today
-  # validate :end_time_before_start_time
+  validate :end_time_before_start_time
 
   def date_before_today
     date_today = Date.today.to_time.to_i

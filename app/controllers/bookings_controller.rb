@@ -12,14 +12,14 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @product = Product.find(params[:prodruct_id])
+    @product = Product.find(params[:product_id])
     @booking = Booking.new(booking_params)
     @booking.product = @product
     @booking.user = current_user
     if @booking.save
       redirect_to booking_path(@booking)
     else
-      render 'product/show'
+      render 'products/show'
     end
   end
 

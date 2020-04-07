@@ -2,23 +2,29 @@ class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :product
 
-  validates :date, presence: true
-  validates :start, presence: true
-  validates :end, presence: true
+  validates :end_date, presence: true
+  validates :start_date, presence: true
+
+  validate :end_date_after_start_date
   validate :date_before_today
-  # validate :end_time_before_start_time
+  private
+
+  def end_date_after_start_date
+    return if end_date.blank? || start_date.blank?
+
+    if end_date < start_date
+      errors.add(:end_date, "must be after the start date")
+    end
+  end
 
   def date_before_today
-    date_today = Date.today.to_time.to_i
-    errors.add(:date, "can't be before today!") if date.to_time.to_i < date_today
-  end
-
-  def start_time_before_now
-    time_today = Date.today.to_time.to_i
-    errors.add(:start_time, "can't be before this hour!") if start_time.to_time.to_i <= time_today
-  end
-
-  def end_time_before_start_time
-    errors.add(:end_time, "hay un error elegi bien!") if end_time.to_i <= start_time.to_i
+    return if end_date.blank? || start_date.blank?
+    dates = Date.today.to_time.to_i
+    errors.add(:start_date, "tiene que ser despues de hoy") if start_date.to_time.to_i < dates
   end
 end
+
+
+
+
+

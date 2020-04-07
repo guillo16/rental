@@ -7,6 +7,7 @@ class Booking < ApplicationRecord
   validates :end_time, presence: true
   validate :date_before_today
   validate :end_time_before_start_time
+  validate :validate_no_overlap_on_screen
 
   def date_before_today
     date_today = Date.today.to_time.to_i

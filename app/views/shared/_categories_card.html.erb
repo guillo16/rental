@@ -1,6 +1,9 @@
-<%= link_to category_path(category) do %>
-<div class="categories-card">
-  <img src="<%= category.photo %>" alt="">
-  <h2><%= category.title.upcase %></h2>
+<div class="wrapper-categories-card">
+  <%= link_to category_path(category) do %>
+  <div class="categories-card">
+    <img src="<%= category.photo %>" alt="">
+    <h2><%= category.title.upcase %></h2>
+  </div>
+  <% end %>
 </div>
-<% end %>
+

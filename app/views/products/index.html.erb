@@ -1,18 +1,21 @@
 <%= render 'shared/navbar' %>
 <div class="container">
-  <% @categories.each do |category| %>
-  <%= render 'shared/categories_card', category: category %>
+
+
+  <div class="categories-container-product">
+    <% @categories.each do |category| %>
+    <%= render 'shared/categories_card', category: category %>
+    <% end %>
+  </div>
+  <% @products.each do |product| %>
+  <%= render 'shared/product_card' %>
+  <div class="product">
+    <h3><%= link_to product.title, product_path(product) %></h3>
+
+    <p><%= product.description %></p>
+  </div>
   <% end %>
 </div>
-<% @products.each do |product| %>
-<%= render 'shared/product_card' %>
-<div class="product">
-  <h3><%= link_to product.title, product_path(product) %></h3>
-
-  <p><%= product.description %></p>
-</div>
-<% end %>
-
 
 
 

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :products do
     resources :bookings, only: [:new, :create]
   end
-  resources :cateogries, only: :show
+  resources :categories, only: :show
 
   resources :users, only: [:show]
 

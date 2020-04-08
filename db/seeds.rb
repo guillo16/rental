@@ -22,9 +22,12 @@ user3 = User.create! email: 'user3@mail.com', password: 123456
 
 puts 'creating Categories'
 
-supercars = Category.create! title: 'supercar', photo: 'https://images.unsplash.com/photo-1566024381391-173a6ba408c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
-suv = Category.create! title: 'suv', photo: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2020-audi-q5-mmp-1-1566497427.jpg?crop=0.668xw:0.710xh;0.119xw,0.181xh&resize=640:*'
-luxury = Category.create! title: 'luxury', photo: 'https://images.unsplash.com/photo-1471289549423-04adaecfa1f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2153&q=80'
+Category.create! title: 'Buenos Aires', photo: 'https://images.unsplash.com/photo-1545424435-010aa04d91cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80'
+Category.create! title: 'New York', photo: 'https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80'
+Category.create! title: 'London', photo: 'https://images.unsplash.com/photo-1488747279002-c8523379faaa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80'
+Category.create! title: 'Paris', photo: 'https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80'
+Category.create! title: 'Roma', photo: 'https://images.unsplash.com/photo-1529260830199-42c24126f198?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1655&q=80'
+Category.create! title: 'Tokyo', photo: 'https://images.unsplash.com/photo-1513407030348-c983a97b98d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80'
 
 puts 'creating Products'
 

@@ -1,6 +1,20 @@
+  .super-wrapper {
+    display: flex;
+
+  }
+
+  #map {
+    flex: 0 0 35%;
+    position: sticky !important;
+    top: 0px;
+    height: 100vh;
+
+  }
+
 .category-product-wrapper {
   width: 90%;
   margin: 0 auto;
+  padding: 20px;
   a {
     text-decoration: none;
   }

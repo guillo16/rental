@@ -1,3 +1,6 @@
-<% @category.products.each do |product| %>
-<%= render 'shared/category_product_card', product: product %>
-<% end %>
+<div class="category-product-wrapper">
+  <% @category.products.each do |product| %>
+  <%= render 'shared/category_product_card', product: product %>
+  <% end %>
+</div>
+

@@ -18,3 +18,29 @@
   margin-top: 5px;
   font-size: 14px;
 }
+
+.product-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+
+}
+
+
+@media(max-width: 1100px){
+  .product-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+
+}
+}
+
+@media(max-width: 686px){
+  .product-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+
+}
+}

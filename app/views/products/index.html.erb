@@ -8,14 +8,11 @@
   </div>
   <h2 class="product-index-title">Cars with the best rating</h2>
   <p class="product-index-subtitle">Explore some of the best options for you arround the world</p>
-  <% @products.each do |product| %>
-  <%= render 'shared/product_card' %>
   <div class="product-container">
-    <h3><%= link_to product.title, product_path(product) %></h3>
-
-    <p><%= product.description %></p>
+    <% @products.each do |product| %>
+    <%= render 'shared/product_card', product: product %>
+    <% end %>
   </div>
-  <% end %>
 </div>
 
 

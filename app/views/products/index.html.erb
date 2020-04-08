@@ -1,7 +1,7 @@
 <%= render 'shared/navbar' %>
 <div class="container">
-  <% @categories.each do |categories| %>
-  <%= render 'shared/categories_card'%>
+  <% @categories.each do |category| %>
+  <%= render 'shared/categories_card', category: category %>
   <% end %>
 </div>
 <% @products.each do |product| %>

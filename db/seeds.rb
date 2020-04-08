@@ -22,9 +22,9 @@ user3 = User.create! email: 'user3@mail.com', password: 123456
 
 puts 'creating Categories'
 
-supercars = Category.create! title: 'supercar'
-suv = Category.create! title: 'suv'
-luxury = Category.create! title: 'luxury'
+supercars = Category.create! title: 'supercar', photo: 'https://images.unsplash.com/photo-1566024381391-173a6ba408c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
+suv = Category.create! title: 'suv', photo: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2020-audi-q5-mmp-1-1566497427.jpg?crop=0.668xw:0.710xh;0.119xw,0.181xh&resize=640:*'
+luxury = Category.create! title: 'luxury', photo: 'https://images.unsplash.com/photo-1471289549423-04adaecfa1f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2153&q=80'
 
 puts 'creating Products'
 

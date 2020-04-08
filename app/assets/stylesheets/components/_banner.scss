@@ -3,4 +3,26 @@
   height: 100vh;
   background-size: cover;
   background-position: center;
+  h3 {
+    display: none;
+  }
+}
+
+
+
+@media(max-width: 700px){
+  .banner{
+    height: 60vh;
+    display: flex;
+    align-items: flex-end;
+
+    h3 {
+      display: block;
+      padding-bottom: 50px;
+
+      font-size: 30px;
+      color: white;
+      font-weight: bold;
+    }
+  }
 }

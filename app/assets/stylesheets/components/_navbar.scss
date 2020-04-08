@@ -39,7 +39,6 @@
         background-color: transparent;
       }
     }
-
   }
 }
 
@@ -58,4 +57,10 @@
   width: 40px;
 }
 
+
+@media(max-width: 700px){
+  .navbar-home {
+  display: none;
+}
+}
 

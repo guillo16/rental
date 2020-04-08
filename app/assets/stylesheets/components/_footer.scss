@@ -1,0 +1,54 @@
+.footer-wrapper{
+  display: none;
+}
+.home-footer {
+ display: flex;
+ justify-content: center;
+ align-items:center;
+ padding: 10px;
+ background-color: white;
+ border-top: 1px solid lightgrey;
+ text-align: center;
+ a {
+  color: red;
+  margin-right: 50px;
+  &:hover{
+    color: red;
+    text-decoration: none;
+    i {
+      color: red;
+    }
+    p {
+      color: red;
+    }
+  }
+
+}
+p {
+  margin-bottom: 0px;
+  color: black;
+  font-size: 14px;
+}
+
+h3 {
+  margin-bottom: 0px;
+  color: red;
+  font-size: 14px;
+}
+i {
+  color: grey;
+  font-size: 21px;
+  margin-bottom: 0px;
+}
+
+.fa-car {
+  color: red;
+}
+}
+
+
+@media(max-width: 700px){
+  .footer-wrapper{
+    display: block;
+  }
+}

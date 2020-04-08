@@ -1,0 +1,6 @@
+<%= link_to category_path(category) do %>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= category.photo %>)">
+  <h2><%= category.title.upcase %></h2>
+</div>
+<% end %>
+

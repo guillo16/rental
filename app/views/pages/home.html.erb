@@ -1,2 +1,30 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.2)), url(https://res.cloudinary.com/dw7ox75dg/image/upload/c_scale,w_1179/v1586357461/photo-1555626906-fcf10d6851b4.jpg);">
+  <div class="container">
+    <%= render 'shared/home_navbar' %>
+    <h3>Book cars everywhere yo want</h3>
+    <div class="booking-container">
+      <h2>Book cars everywhere yo want</h2>
+      <%= render 'bookings/new' %>
+    </div>
+  </div>
+</div>
+<div class="booking-container-hide">
+  <div class="container">
+    <%= render 'bookings/new' %>
+  </div>
+</div>
+<div class="container">
+  <h2 class="category-title"> Discover rental</h2>
+  <div class="category-wrapper">
+    <% @categories.each do |category| %>
+    <%= render 'shared/category_cards', category: category %>
+    <% end %>
+  </div>
+</div>
+<div class="footer">
+  <%= render 'shared/home_footer' %>
+</div>
+
+
+
+

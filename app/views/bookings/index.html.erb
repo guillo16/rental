@@ -1,0 +1,6 @@
+<% current_user.bookings.each do |booking| %>
+<h1><%= booking.product.title %></h1>
+<h2><%= booking.start_date %></h2>
+<h3><%= booking.end_date %></h3>
+<h4><%= booking.user.email %></h4>
+<% end %>

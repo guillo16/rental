@@ -1,1 +1,35 @@
 // Specific CSS for your home-page
+.booking-container {
+  width: 400px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 6px;
+}
+
+//title home
+.category-title {
+  padding-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+
+.booking-container-hide {
+  display: none;
+
+}
+
+
+@media(max-width: 700px) {
+  .booking-container-hide {
+    display: block;
+    padding: 30px 0px;
+    background-color: white;
+    width: 100%;
+
+  }
+  .booking-container {
+   display: none;
+ }
+
+}

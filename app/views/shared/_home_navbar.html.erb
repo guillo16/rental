@@ -1,0 +1,21 @@
+<div class="navbar-home">
+  <div class="container">
+    <div class="navbar-content">
+      <div>
+        <%= link_to "#", class: "navbar-brand" do %>
+        <i class="fas fa-car"></i>
+        <% end %>
+      </div>
+      <div class="d-flex align-items-center">
+        <%= link_to "Places", "#"%>
+        <%= link_to "Cars", "#"%>
+        <% if user_signed_in? %>
+        <%= link_to 'Profile', user_path(current_user) %>
+        <% else %>
+        <%= link_to "Login", new_user_session_path %>
+        <p><%= link_to "Sign up", new_user_registration_path %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

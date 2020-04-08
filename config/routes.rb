@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  root to: 'products#index'
+  root to: 'pages#home'
 
   resources :products do
     resources :bookings, only: [:new, :create]
   end
+  resources :categories, only: :show
+
+  resources :users, only: [:show]
 
   resources :bookings, only: [:index, :show, :destroy]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

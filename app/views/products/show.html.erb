@@ -1,5 +1,10 @@
 <%= @product.title %>
 <%= @product.description %>
 
-
+<% if @product.user == current_user %>
+<% @product.bookings.each do |booking| %>
+<%= booking.start_date  %>
+<% end %>
+<% else %>
 <%= render 'bookings/new' %>
+<% end %>

@@ -1,0 +1,10 @@
+<% if @user == current_user %>
+<h1>Mis reservas</h1>
+<%= link_to 'reservas',bookings_path  %>
+<h2>Mis Autos</h2>
+<% current_user.products.each do |hola| %>
+<%= link_to hola.title, product_path(hola)  %>
+<% end %>
+<% else %>
+chau
+<% end %>

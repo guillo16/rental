@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  root to: 'products#index'
+  root to: 'pages#home'
 
   resources :products do
     resources :bookings, only: [:new, :create]

@@ -8,9 +8,16 @@
     <i class="far fa-heart"></i>
     <p>Places</p>
     <% end %>
+    <% if user_signed_in? %>
+    <%= link_to user_path(current_user) do %>
+    <i class="fas fa-user"></i>
+    <p>Profile</p>
+    <% end %>
+    <% else %>
     <%= link_to new_user_session_path do %>
     <i class="fas fa-user"></i>
     <p>Log in</p>
+    <% end %>
     <% end %>
   </div>
 </div>

@@ -10,7 +10,7 @@
         <%= link_to "Places", "#"%>
         <%= link_to "Cars", "#"%>
         <% if user_signed_in? %>
-        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        <%= link_to 'Profile', user_path(current_user) %>
         <% else %>
         <%= link_to "Login", new_user_session_path %>
         <p><%= link_to "Sign up", new_user_registration_path %></p>

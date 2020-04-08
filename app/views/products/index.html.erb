@@ -1,5 +1,11 @@
-Awesome Products
+<%= render 'shared/navbar' %>
+<div class="container">
+  <% @categories.each do |categories| %>
+  <%= render 'shared/categories_card'%>
+  <% end %>
+</div>
 <% @products.each do |product| %>
+<%= render 'shared/product_card' %>
 <div class="product">
   <h3><%= link_to product.title, product_path(product) %></h3>
 

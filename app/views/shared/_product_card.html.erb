@@ -1,0 +1,19 @@
+<div class="product-card">
+  <%= link_to product_path(product) do %>
+  <div class="product-card-image">
+    <img src="<%= product.photo %>" alt="">
+  </div>
+  <div class="product-card-category d-flex justify-content-between align-items-center">
+    <h2><%= product.category.title %></h2>
+    <p><i class="fas fa-star"></i>4.75</p>
+  </div>
+  <div class="product-card-title">
+    <h1><%= product.title.truncate(80) %></h1>
+    <h3><strong>$250</strong> per day</h3>
+  </div>
+  <% end %>
+</div>
+
+
+
+

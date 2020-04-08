@@ -1,12 +1,19 @@
-Awesome Products
-<% @products.each do |product| %>
-<div class="product">
-  <h3><%= link_to product.title, product_path(product) %></h3>
-
-  <p><%= product.description %></p>
+<%= render 'shared/navbar' %>
+<div class="container">
+  <h2 class="product-index-title">Look for your dream car</h2>
+  <div class="categories-container-product">
+    <% @categories.each do |category| %>
+    <%= render 'shared/categories_card', category: category %>
+    <% end %>
+  </div>
+  <h2 class="product-index-title">Cars with the best rating</h2>
+  <p class="product-index-subtitle">Explore some of the best options for you arround the world</p>
+  <div class="product-container">
+    <% @products.each do |product| %>
+    <%= render 'shared/product_card', product: product %>
+    <% end %>
+  </div>
 </div>
-<% end %>
-
 
 
 

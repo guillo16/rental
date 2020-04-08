@@ -4,7 +4,7 @@ class ProductsTest < ApplicationSystemTestCase
   test "visiting the index" do
     visit '/'
     # save_and_open_screenshot
-    assert_selector ".product", count: Product.count
+    assert_selector ".product-container", count: Product.count
   end
 
   test "lets a signed in user create a new product" do

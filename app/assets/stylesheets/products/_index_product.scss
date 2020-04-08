@@ -1,9 +1,20 @@
 .categories-container-product {
  width: 100%;
- padding: 20px 5px;
+ padding: 10px 5px;
  overflow-x: scroll;
  overflow-y: hidden;
  white-space: nowrap;
 }
 
+.product-index-title {
+  margin-top: 50px;
+  font-size: 22px;
+  color: black;
+  margin-bottom: 0px;
+}
 
+
+.product-index-subtitle {
+  margin-top: 5px;
+  font-size: 14px;
+}

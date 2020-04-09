@@ -9,7 +9,8 @@ class CategoriesController < ApplicationController
       {
         lat: product.latitude,
         lng: product.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { product: product })
+        infoWindow: render_to_string(partial: "info_window", locals: { product: product }),
+        id: product.id
 
       }
     end

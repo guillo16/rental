@@ -5,7 +5,7 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
     @products = Product.geocoded # returns flats with coordinates
 
-    @markers = @products.map do |product|
+    @markers = @category.products.map do |product|
       {
         lat: product.latitude,
         lng: product.longitude,

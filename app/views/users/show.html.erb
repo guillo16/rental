@@ -1,14 +1,36 @@
 <% if @user == current_user %>
-<h1>Mis reservas</h1>
-<%= link_to 'reservas',bookings_path  %>
-<h2>Mis Autos</h2>
-<% current_user.products.each do |hola| %>
-<%= link_to hola.title, product_path(hola)  %>
-<% end %>
 
 
-<%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+
+
+
 
 <% else %>
 chau
 <% end %>
+
+<div class="container">
+  <div class="user-show-container">
+    <div class="user-show-title d-flex justify-content-between">
+      <div>
+        <h2>Hi, I'm <%= @user.email %></h2>
+        <p><%= @user.created_at.strftime('Joined in %Y') %></p>
+        <%= link_to 'Edit profile', '#' %>
+      </div>
+      <img src="https://static.thenounproject.com/png/363639-200.png" style="height: 100px; width: 100px;"alt="">
+    </div>
+    <div class="user-show-content">
+      <%= link_to 'Reviews by you', '#' %>
+    </div>
+    <div class="user-show-content">
+      <%= link_to 'My Bookings', bookings_path %>
+    </div>
+    <div class="user-show-content">
+      <%= link_to 'Reviews by you', '#' %>
+    </div>
+    <div class="user-show-content">
+      <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+    </div>
+  </div>
+</div>
+

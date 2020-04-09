@@ -98,9 +98,8 @@
 
   @media(max-width: 1036px) {
     .super-wrapper {
-    display: block;
-
-  }
+      display: block;
+    }
     #map {
       display: none;
     }
@@ -116,6 +115,11 @@
 
 
   @media(max-width: 686px){
+
+    .super-wrapper {
+      display: block;
+      margin-top: 120px;
+    }
 
     .category-product-card  {
       display: none;

@@ -1,6 +1,6 @@
-<%= render 'shared/navbar' %>
+<%= render 'shared/mobile_navbar' %>
 <div class="container">
-  <h2 class="product-index-title">Look for your dream car</h2>
+  <h2 class="product-index-title-top">Look for your dream car</h2>
   <div class="categories-container-product">
     <% @categories.each do |category| %>
     <%= render 'shared/categories_card', category: category %>

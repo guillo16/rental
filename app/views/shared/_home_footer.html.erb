@@ -1,14 +1,22 @@
-<div class="footer-wrapper">
+<div class="footer-wrapper pt-5">
   <div class="home-footer fixed-bottom">
     <%= link_to "#" do %>
     <i class="fas fa-car"></i>
-    <h3>Discover</h3>
+    <h3>Explore</h3>
     <% end %>
     <%= link_to '#' do%>
     <i class="far fa-heart"></i>
     <p>Places</p>
     <% end %>
     <% if user_signed_in? %>
+    <%= link_to "#" do %>
+    <i class="far fa-comment-alt"></i>
+    <p>Inbox</p>
+    <% end %>
+    <%= link_to bookings_path do %>
+    <i class="far fa-calendar"></i>
+    <p>Bookings</p>
+    <% end %>
     <%= link_to user_path(current_user) do %>
     <i class="fas fa-user"></i>
     <p>Profile</p>
@@ -21,4 +29,3 @@
     <% end %>
   </div>
 </div>
-

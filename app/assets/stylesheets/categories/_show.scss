@@ -1,6 +1,5 @@
   .super-wrapper {
     display: flex;
-
   }
 
   #map {
@@ -8,12 +7,11 @@
     position: sticky !important;
     top: 0px;
     height: 100vh;
-
   }
 
   .category-product-wrapper {
     width: 90%;
-    margin: 0 auto;
+    margin: 40px auto;
     padding: 20px;
     a {
       text-decoration: none;
@@ -23,17 +21,13 @@
       margin-bottom: 0px;
       font-weight: bold;
       font-size: 32px;
-
     }
 
     p {
       padding-bottom: 8px;
       margin-bottom: 0px;
       font-size: 14px;
-      margin-top: 20px;
-
     }
-
   }
   .category-mobile-container {
     display: none;
@@ -104,9 +98,8 @@
 
   @media(max-width: 1036px) {
     .super-wrapper {
-    display: block;
-
-  }
+      display: block;
+    }
     #map {
       display: none;
     }
@@ -122,6 +115,11 @@
 
 
   @media(max-width: 686px){
+
+    .super-wrapper {
+      display: block;
+      margin-top: 120px;
+    }
 
     .category-product-card  {
       display: none;

@@ -1,5 +1,6 @@
 <%= link_to product_path(product) do %>
-<div class="category-product-card">
+
+<div class="category-product-card" data-product-id="<%= product.id %>">
   <div class="category-product-image">
     <img src="<%= product.photo %>" alt="">
   </div>

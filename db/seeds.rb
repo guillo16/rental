@@ -38,8 +38,9 @@ photo = ['https://images.unsplash.com/photo-1546768292-fb12f6c92568?ixlib=rb-1.2
   'https://images.unsplash.com/photo-1570294646112-27ce4f174e38?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2068&q=80',
   'https://images.unsplash.com/flagged/photo-1553505192-acca7d4509be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1067&q=80'
 ]
+address = [' 172 boulevard Saint Germain, 75006 Paris, France ', ]
 
-10.times do
-  Product.create! title: Faker::Vehicle.make_and_model, description: Faker::Vehicle.standard_specs , photo: photo.sample, category: category.sample , user: user.sample
+20.times do
+  Product.create! title: Faker::Vehicle.make_and_model, description: Faker::Vehicle.standard_specs , photo: photo.sample, category: category.sample ,address: Faker::Address.full_address, user: user.sample
 end
 puts 'finish seeds'

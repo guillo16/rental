@@ -1,0 +1,15 @@
+.category-filters {
+  padding: 16px 0px;
+}
+
+.filters {
+  font-size: 14px;
+  background-color: transparent;
+  padding: 6px 16px;
+  color: black;
+  border: 1px solid grey;
+  border-radius: 30px;
+  &:hover {
+    border-color: black;
+  }
+}

@@ -2,6 +2,7 @@
 <%= f.input :title %>
 <%= f.input :description %>
 <%= f.input :photo %>
+<%= f.input :address, id: "product_address" %>
 <%= f.association :category %>
 <%= f.submit 'Create Product' %>
 <% end %>

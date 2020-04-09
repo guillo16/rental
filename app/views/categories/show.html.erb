@@ -1,6 +1,21 @@
-<div class="category-product-wrapper">
-  <% @category.products.each do |product| %>
-  <%= render 'shared/category_product_card', product: product %>
-  <% end %>
+<%= render 'shared/navbar' %>
+<div class="super-wrapper">
+  <div class="category-product-wrapper">
+    <p>More than <%= @category.products.count %> cars available</p>
+    <h2>Cars in <%= @category.title %></h2>
+    <div class="category-filters">
+      <button class="filters">Filters</button>
+      <button class="filters">Filters</button>
+    </div>
+    <% @category.products.each do |product| %>
+
+    <%= render 'shared/category_product_card', product: product %>
+    <% end %>
+  </div>
+  <div id="map"
+  style="width: 100%;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 </div>
+
 

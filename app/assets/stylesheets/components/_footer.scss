@@ -3,7 +3,7 @@
 }
 .home-footer {
  display: flex;
- justify-content: center;
+ justify-content: space-around;
  align-items:center;
  padding: 10px;
  background-color: white;
@@ -11,7 +11,7 @@
  text-align: center;
  a {
   color: red;
-  margin-right: 40px;
+  margin-right: 0px;
   &:hover{
     color: red;
     text-decoration: none;

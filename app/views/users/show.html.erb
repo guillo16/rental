@@ -5,6 +5,10 @@
 <% current_user.products.each do |hola| %>
 <%= link_to hola.title, product_path(hola)  %>
 <% end %>
+
+
+<%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+
 <% else %>
 chau
 <% end %>

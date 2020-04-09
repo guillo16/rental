@@ -1,0 +1,24 @@
+//this is for the airbnb grid!!!
+.product-show-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.product-show-images-2{
+  img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+}
+
+.product-show-images-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 250px;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,37 @@
+.booking-form-container {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid lightgrey;
+  margin-top: 20px;
+  position: sticky !important;
+  top: 0px;
+
+}
+
+.booking-form-title {
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    margin-bottom: 0px;
+
+  }
+
+}
+
+.form-control[readonly] {
+  background-color: white;
+}
+
+.booking-form {
+  padding-top: 20px;
+  h3 {
+    font-size: 12px;
+    color: #484848;
+    margin-bottom: 0px;
+  }
+
+}

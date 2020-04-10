@@ -1,0 +1,16 @@
+<% if @product.photos.count > 3  %>
+<div class="product-show-images">
+  <div class="product-show-images-2">
+    <% @product.photos.first(1).each do |photo| %>
+    <%= cl_image_tag photo.key %>
+    <% end %>
+  </div>
+  <div class="product-show-images-grid">
+    <% @product.photos.drop(1).each do |photo| %>
+    <%= cl_image_tag photo.key %>
+    <% end %>
+  </div>
+</div>
+<% else %>
+<img src="https://images.clarin.com/2019/05/29/ferrari-sf90-stradale___O72Uz8wep_1256x620__1.jpg" alt="">
+<% end %>

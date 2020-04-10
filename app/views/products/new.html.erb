@@ -1,7 +1,8 @@
 <%= simple_form_for(@product) do |f| %>
 <%= f.input :title %>
 <%= f.input :description %>
-<%= f.input :photo %>
+<%= f.input :photos, as: :file, input_html: { multiple: true } %>
+
 <%= f.input :address, id: "product_address" %>
 <%= f.association :category %>
 <%= f.submit 'Create Product' %>

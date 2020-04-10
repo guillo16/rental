@@ -1,8 +1,45 @@
+//this is for the airbnb grid top of the page!!!
+//wrapper of images
+.product-show-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+}
+ //main image
+.product-show-images-2{
+  img{
+    width: 100%;
+    height: 505px;
+    object-fit: cover;
+  }
+}
+//secondary images
+.product-show-images-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 250px;
+  grid-gap: 5px;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+//carouser part
+.carousel  {
+  img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+  }
+}
+.mobile-post-show {
+  display: none;
+}
 //main wrapper of the page
 .product-show-wrapper {
-display: flex;
-justify-content: center;
-
+  display: flex;
+  justify-content: center;
 }
 
 .product-show-container {
@@ -43,93 +80,26 @@ justify-content: center;
     margin-bottom: 0px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//this is for the airbnb grid!!!
-.product-show-images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.product-show-images-2{
-  img{
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-  }
-}
-
-.product-show-images-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 250px;
-  img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-
-.carousel  {
-  img {
-    width: 100%;
-    height: 50vh;
-    object-fit: cover;
-  }
-}
-
-.product-show-images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 5px;
-}
-
-.product-show-images-2{
-  img{
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-  }
-}
-
-.product-show-images-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 250px;
-  grid-gap: 5px;
-  img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-.mobile-post-show {
-  display: none;
-}
-
 @media(max-width: 700px){
+  //photos part
   .mobile-post-show {
     display: block;
   }
   .desktop-post-show{
+    display: none;
+  }
+
+  //content part
+  .product-show-wrapper {
+    display: block;
+  }
+
+  .product-show-container {
+    width: 90%;
+    margin: 0 auto;
+    padding-right: 0px;
+  }
+  .product-show-booking{
     display: none;
   }
 

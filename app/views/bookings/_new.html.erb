@@ -4,17 +4,20 @@
     <p><i class="fas fa-star"></i> 4,95(34 evaluaciones)</p>
   </div>
   <div class="booking-form">
-    <%= simple_form_for([@product, @booking]) do |f| %>
-    <h3>Start date</h3>
-    <%= f.input :start_date, as: :string, label: false, input_html: { id: "range_start" } %>
-    <h3>End date</h3>
-    <%= f.input :end_date, as: :string, label: false, input_html: { id: "range_end" } %>
-    <div class="d-flex justify-content-between">
-      <h4 style="font-size: 12px; color: black;">Total</h4>
-      <p style="font-size: 12px; color: black;">$2000</p>
+    <div id='product-booking-dates' data-unavailable="<%= @product.unavailable_dates.to_json %>">
+
+      <%= simple_form_for([@product, @booking]) do |f| %>
+      <h3>Start date</h3>
+      <%= f.input :start_date, as: :string, label: false, input_html: { id: "range_start" } %>
+      <h3>End date</h3>
+      <%= f.input :end_date, as: :string, label: false, input_html: { id: "range_end" } %>
+      <div class="d-flex justify-content-between">
+        <h4 style="font-size: 12px; color: black;">Total</h4>
+        <p style="font-size: 12px; color: black;">$2000</p>
+      </div>
+      <%= f.submit 'Reserve',class: "btn btn-primary btn-lg btn-block"  %>
+      <% end %>
+      <p class='text-center' style="font-size: 12px;font-weight:bold; color: grey; margin-top: 8px; margin-bottom: 12px">You won’t be charged yet</p>
     </div>
-    <%= f.submit 'Reserve',class: "btn btn-primary btn-lg btn-block"  %>
-    <% end %>
-    <p class='text-center' style="font-size: 12px;font-weight:bold; color: grey; margin-top: 8px; margin-bottom: 12px">You won’t be charged yet</p>
   </div>
 </div>

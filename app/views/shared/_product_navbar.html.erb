@@ -1,0 +1,19 @@
+<div class="product-navbar-wrapper">
+  <div class="product-navbar-container">
+    <div class="navbar-icon">
+      <img src="https://image.flaticon.com/icons/png/512/55/55283.png" alt="">
+    </div>
+    <div class="navbar-content">
+      <%= link_to "Places", "#"%>
+      <%= link_to "Cars", "#"%>
+      <% if user_signed_in? %>
+      <%= link_to 'Profile', user_path(current_user) %>
+      <% else %>
+      <%= link_to "Login", new_user_session_path %>
+      <p><%= link_to "Sign up", new_user_registration_path %></p>
+      <% end %>
+    </div>
+
+  </div>
+</div>
+

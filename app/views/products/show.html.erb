@@ -1,34 +1,60 @@
 <%= render 'shared/mobile_navbar' %>
-<%= @product.title %>
-<%= @product.description %>
-
-<% if @product.user == current_user %>
-<% @product.bookings.each do |booking| %>
-<%= booking.start_date  %>
-<% end %>
-<% else %>
-<%= render 'bookings/new' %>
-<% end %>
-<div class="product-show-images-mobile">
-
+<div class="mobile-post-show">
+ <%= render 'shared/carousel' %>
 </div>
-
-<div class="product-show-images">
-  <div class="product-show-images-2">
-    <img src="https://images.clarin.com/2019/05/29/ferrari-sf90-stradale___O72Uz8wep_1256x620__1.jpg" alt="">
-  </div>
-  <div class="product-show-images-grid">
-    <img src="https://images.clarin.com/2019/05/08/ferrari-sf90-stradale___rd70pj7qk_720x0__1.jpg" alt="">
-    <img src="https://images.clarin.com/2019/05/08/ferrari-sf90-stradale___7pk8wcUw-_720x0__1.jpg" alt="">
-    <img src="https://images.clarin.com/2019/05/08/ferrari-sf90-stradale___jPuqPW8Gy_720x0__1.jpg" alt="">
-    <img src="https://images.clarin.com/2019/05/08/ferrari-sf90-stradale___jPuqPW8Gy_720x0__1.jpg" alt="">
-  </div>
-
-
+<div class="desktop-post-show">
+  <%= render 'shared/grid' %>
 </div>
-<div class="container">
-  <div class="product-show-content">
-
+<div class="product-show-wrapper">
+  <div class="product-show-container">
+    <div class="product-show-title">
+      <div>
+        <h2><%= @product.title %></h2>
+        <h3><%= @product.category.title %></h3>
+        <p><%= @product.description %></p>
+      </div>
+      <div class="product-show-avatar text-center">
+        <img src="https://static.thenounproject.com/png/363639-200.png" style="height: 60px; width: 60px;"alt="">
+        <p><%= @product.user.email %></p>
+      </div>
+    </div>
+    <div class="product-show-content">
+      <div class="d-flex">
+        <img src="https://cdn0.iconfinder.com/data/icons/jumpicon-energy-glyph/32/-_Gas-Station-Petrol-Fuel-Oil-Pump-512.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">
+        <p>50 litros</p>
+      </div>
+      <div class="d-flex">
+        <img src="https://cdn1.iconfinder.com/data/icons/car-engine-dashboard-lights-solid-style-set-2/91/Car_Engine_-_Dashboard_Lights_68-512.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">
+        <p>1000 Horse Power</p>
+      </div>
+      <div class="d-flex">
+        <img src="https://static.thenounproject.com/png/651834-200.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">
+        <p>Automatic</p>
+      </div>
+    </div>
+    <div class="reviews mt-3">
+      <h2>REVIEWS</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione animi voluptates sequi vero ducimus porro sunt nostrum, quas molestias rerum natus! Quo quia rerum officia, consequatur explicabo animi suscipit harum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione animi voluptates sequi vero ducimus porro sunt nostrum, quas molestias rerum natus! Quo quia rerum officia, consequatur explicabo animi suscipit harum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione animi voluptates sequi vero ducimus porro sunt nostrum, quas molestias rerum natus! Quo quia rerum officia, consequatur explicabo animi suscipit harum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione animi voluptates sequi vero ducimus porro sunt nostrum, quas molestias rerum natus! Quo quia rerum officia, consequatur explicabo animi suscipit harum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione animi voluptates sequi vero ducimus porro sunt nostrum, quas molestias rerum natus! Quo quia rerum officia, consequatur explicabo animi suscipit harum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione animi voluptates sequi vero ducimus porro sunt nostrum, quas molestias rerum natus! Quo quia rerum officia, consequatur explicabo animi suscipit harum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione animi voluptates sequi vero ducimus porro sunt nostrum, quas molestias rerum natus! Quo quia rerum officia, consequatur explicabo animi suscipit harum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione animi voluptates sequi vero ducimus porro sunt nostrum, quas molestias rerum natus! Quo quia rerum officia, consequatur explicabo animi suscipit harum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione animi voluptates sequi vero ducimus porro sunt nostrum, quas molestias rerum natus! Quo quia rerum officia, consequatur explicabo animi suscipit harum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione animi voluptates sequi vero ducimus porro sunt nostrum, quas molestias rerum natus! Quo quia rerum officia, consequatur explicabo animi suscipit harum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione animi voluptates sequi vero ducimus porro sunt nostrum, quas molestias rerum natus! Quo quia rerum officia, consequatur explicabo animi suscipit harum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione animi voluptates sequi vero ducimus porro sunt nostrum, quas molestias rerum natus! Quo quia rerum officia, consequatur explicabo animi suscipit harum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione animi voluptates sequi vero ducimus porro sunt nostrum, quas molestias rerum natus! Quo quia rerum officia, consequatur explicabo animi suscipit harum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione animi voluptates sequi vero ducimus porro sunt nostrum, quas molestias rerum natus! Quo quia rerum officia, consequatur explicabo animi suscipit harum!
+      </p>
+    </div>
   </div>
+  <section id="bookings">
+    <div class="product-show-booking">
+      <%= render 'bookings/new' %>
+    </div>
+  </section>
 </div>
-
+<%= render 'shared/footer-show' %>

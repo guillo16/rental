@@ -1,24 +1,108 @@
-//this is for the airbnb grid!!!
+//this is for the airbnb grid top of the page!!!
+//wrapper of images
 .product-show-images {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
 }
-
+ //main image
 .product-show-images-2{
   img{
     width: 100%;
-    height: 500px;
+    height: 505px;
     object-fit: cover;
   }
 }
-
+//secondary images
 .product-show-images-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 250px;
+  grid-gap: 5px;
   img{
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+}
+//carouser part
+.carousel  {
+  img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+  }
+}
+.mobile-post-show {
+  display: none;
+}
+//main wrapper of the page
+.product-show-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.product-show-container {
+  flex: 0 0 60%;
+  padding-right: 30px;
+}
+
+.product-show-booking {
+  width: 400px;
+}
+
+.product-show-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px;
+  border-bottom: 1px solid lightgrey;
+  h2 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 16px;
+    padding: 10px 0px;
+    color: #484848;
+  }
+  p {
+    font-size: 16px;
+    margin-bottom: 0px;
+    color: #484848;
+  }
+}
+
+.product-show-content {
+  padding: 16px 0px;
+  border-bottom: 1px solid lightgrey;
+  p {
+    margin-bottom: 0px;
+  }
+}
+@media(max-width: 700px){
+  //photos part
+  .mobile-post-show {
+    display: block;
+  }
+  .desktop-post-show{
+    display: none;
+  }
+
+  //content part
+  .product-show-wrapper {
+    display: block;
+  }
+
+  .product-show-container {
+    width: 90%;
+    margin: 0 auto;
+    padding-right: 0px;
+  }
+  .product-show-booking{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom:100px;
+  }
+
 }

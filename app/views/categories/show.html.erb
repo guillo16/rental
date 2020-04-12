@@ -9,7 +9,6 @@
       <button class="filters">Filters</button>
     </div>
     <% @category.products.each do |product| %>
-
     <%= render 'shared/category_product_card', product: product %>
     <% end %>
   </div>

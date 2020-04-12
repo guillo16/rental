@@ -51,8 +51,7 @@
     object-fit: cover;
   }
 }
-
-//products card in prodcuts index
+//products card in products index
 .product-card {
   margin-bottom: 30px;
   a {
@@ -120,6 +119,12 @@
     object-fit: cover;
   }
 }
+
+.category-wrapper {
+    grid-template-columns: 1fr 1fr ;
+    padding: 10px 0px;
+  }
+
 }
 
 @media(max-width: 686px){

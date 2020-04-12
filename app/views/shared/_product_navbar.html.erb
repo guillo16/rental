@@ -1,0 +1,32 @@
+<div class="product-navbar-wrapper">
+  <div class="product-navbar-container">
+    <div class='navbar-product-icon'>
+      <img src="https://image.flaticon.com/icons/png/512/55/55283.png" alt="">
+    </div>
+    <div class="product-navbar-content">
+      <%= link_to "Places", "#"%>
+      <%= link_to "Cars", "#"%>
+      <% if user_signed_in? %>
+      <div class="btn-group">
+        <button type="button" class="btn-sign-in" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Profile <i class="fas fa-user"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right">
+          <%= link_to 'Messages', user_path(current_user), class:'dropdown-item profile' %>
+          <%= link_to 'Profile', user_path(current_user), class:'dropdown-item profile' %>
+          <%= link_to 'Saved', user_path(current_user), class:'dropdown-item profile' %>
+          <div class="dropdown-divider"></div>
+          <%= link_to 'Help', user_path(current_user), class:'dropdown-item' %>
+          <%= link_to 'Log out', user_path(current_user), class:'dropdown-item' %>
+        </div>
+      </div>
+      <% else %>
+      <%= link_to "Login", new_user_session_path %>
+      <%= link_to "Sign up", new_user_registration_path, class: 'btn-sign-in' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+

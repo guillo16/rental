@@ -1,3 +1,4 @@
+<%= render 'shared/product_navbar' %>
 <%= render 'shared/mobile_navbar' %>
 <div class="super-wrapper">
   <div class="category-product-wrapper">
@@ -8,7 +9,6 @@
       <button class="filters">Filters</button>
     </div>
     <% @category.products.each do |product| %>
-
     <%= render 'shared/category_product_card', product: product %>
     <% end %>
   </div>

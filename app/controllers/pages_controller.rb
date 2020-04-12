@@ -4,5 +4,6 @@ class PagesController < ApplicationController
   def home
     @categories = Category.all
     @booking = Booking.new
+    @products = Product.all
   end
 end
